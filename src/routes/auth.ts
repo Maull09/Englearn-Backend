@@ -102,10 +102,11 @@ router.post("/login", async (req: Request, res: Response) => {
         httpOnly: false,
         secure: false,
         sameSite: "none",
-        domain: process.env.NODE_ENV === "production" ? "englearnuniversal.vercel.app" : "localhost",
+        domain: "englearnuniversal.vercel.app",
         maxAge: 24 * 60 * 60 * 1000,
       });
       res.status(200).json({ message: "Login successful", user: userData });
+      console.log("User data:", userData);
       return;
     }
 
