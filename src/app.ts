@@ -23,7 +23,11 @@ app.set("trust proxy", 1);
 // Configure CORS
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:3000" || "http://localhost:8081",
+    origin: [
+      "http://localhost:3000",
+      "http://localhost:8081",
+      "https://englearnuniversal.vercel.app",
+    ],
     methods: "GET,POST,PUT,DELETE,OPTIONS",
     allowedHeaders: "Content-Type,Authorization,user-id",
     credentials: true, // Allow credentials (cookies)
