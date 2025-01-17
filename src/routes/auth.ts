@@ -101,7 +101,7 @@ router.post("/login", async (req: Request, res: Response) => {
       res.cookie("userData", JSON.stringify(userData), {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
-        sameSite: "lax",
+        sameSite: "none",
         domain: process.env.NODE_ENV === "production" ? "englearnuniversal.vercel.app" : "localhost",
         maxAge: 24 * 60 * 60 * 1000,
       });
