@@ -18,8 +18,7 @@
     "dotenv": "^16.4.7",
     "drizzle-orm": "^0.38.4",
     "express": "^4.21.2",
-    "@neondatabase/serverless": "^0.10.4",
-    "@react-native-async-storage/async-storage": "^2.1.0"
+    "@neondatabase/serverless": "^0.10.4"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
